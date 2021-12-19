@@ -1,0 +1,375 @@
+body {
+
+  background: url("/img/img3.jpg");
+  /* يعطيني صورة ناقصة  */
+
+  width: 100%;
+  height: 600px;
+  /* 600px حجم خاص بالشاشات */
+
+
+  /* أجيب الصورة الكاملة بالخاصية background- size  */
+
+  background-size: cover;
+
+
+}
+
+
+
+#img {
+  place-content: right;
+
+}
+
+#test {
+  color: green;
+  font-size: 20px;
+}
+
+#pulp {
+  text-align: top;
+  font-size: 50px;
+
+}
+
+#all {
+  margin-top: 0px;
+  display: grid;
+  justify-content: center;
+
+}
+
+
+#board {
+  display: grid;
+  /* grid-template-columns: 100px,100px,100px; */
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+
+}
+
+#winner {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: cursive;
+  font-size: 30px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+
+}
+
+#player {
+  font-family: cursive;
+  font-size: 30px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+#M {
+  padding-right: -5px;
+}
+
+#D {
+  margin-top: 5px;
+  padding-bottom: 0;
+  text-align: left;
+  font-size: 40px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+#turn {
+  font-size: 40px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+#restart {
+  animation: flicker 0.5s infinite alternate;
+  color: rgb(107, 107, 107);
+  padding: 10px 10px;
+  display: inline-block;
+  border-radius: 20px;
+  color: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1em;
+  overflow: hidden;
+  background-color: rgb(137, 255, 137);
+  place-items: right;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+}
+
+/*creating animation effect*/
+
+#restart:hover {
+  color: #fff;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: solid rgb(136, 136, 136) 2px;
+  animation: pulsate 1.5s infinite alternate;
+  text-align: center;
+  font-size: 80px;
+  border-collapse: 10;
+  color: rgb(184, 184, 184);
+  font-family: cursive;
+  text-shadow: 0 0 50px #ffffff;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+@keyframes pulsate {
+
+  100% {
+
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #bc13fe,
+      0 0 80px #bc13fe,
+      0 0 90px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 150px #bc13fe;
+
+  }
+
+  0% {
+
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #bc13fe,
+      0 0 45px #bc13fe,
+      0 0 55px #bc13fe,
+      0 0 70px #bc13fe,
+      0 0 80px #13fe32;
+
+  }
+}
+
+#cell_0 {
+  animation: flicker 0.1s infinite alternate;
+  color: #fff;
+}
+
+#cell_1 {
+  animation: flicker 0.6s infinite alternate;
+  color: #fff;
+}
+
+#cell_2 {
+  animation: flicker 0.5s infinite alternate;
+  color: #fff;
+}
+
+#cell_3 {
+  animation: flicker 1.1s infinite alternate;
+  color: #fff;
+}
+
+#cell_4 {
+  animation: flicker 1.0s infinite alternate;
+  color: #fff;
+}
+
+#cell_5 {
+  animation: flicker 1.2s infinite alternate;
+  color: #fff;
+}
+
+#cell_6 {
+  animation: flicker 0.7s infinite alternate;
+  color: #fff;
+}
+
+#cell_7 {
+  animation: flicker 0.9s infinite alternate;
+  color: #fff;
+}
+
+#cell_8 {
+  animation: flicker 0.7s infinite alternate;
+  color: #fff;
+}
+
+#D {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+#winner {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+#player {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+.cell {
+  animation: flicker 0.5s infinite alternate;
+  color: #fff;
+}
+
+.cell:hover {
+  color: #fff;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+p {
+  text-align: center;
+}
+
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background: #ddd;
+  color: rgb(14, 14, 17);
+  height: 1.4rem;
+  width: 105%;
+  padding: .2rem;
+  text-align: center;
+  font-size: .8rem;
+  z-index: 999;
+
+  font-size: 15px;
+
+  font-weight: bolder;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+
+
+@media (max-height: 600px) {
+  #Menu .title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  #Menu .menu-text {
+    font-size: .8rem;
+    font-weight: bold;
+    margin: .2rem 0rem;
+  }
+
+  #Menu button {
+    width: 2rem;
+    height: 2rem;
+    margin: .3rem .3rem;
+    font-size: 1rem;
+  }
+}
